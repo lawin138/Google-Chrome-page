@@ -1,0 +1,199 @@
+
+ol {
+    list-style: dot;
+}
+ul {
+    list-style-type: disc;
+}
+/*table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*/
+
+/*separate=each border have*/
+table {
+    border-collapse: separate;
+    -webkit-border-horizontal-spacing: 2px;
+    -webkit-border-vertical-spacing: 2px;
+}
+/*PS,  <link>rel="stylesheet" href=" "  寫在html內,  @import url(" " )   寫在css內*/
+
+@import url("https://fonts.googleapis.com/earlyaccess/cwtexkai.css");
+/*adobe楷體中文  ,code: font-family: "cwTeKai", serif; */
+@import url("https://fonts.googleapis.com/earlyaccess/cwtexming.css");
+/*adobe明細體中文,  code: font-family:"cwTeMing", serif*/
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+/*中粗度,瘦長標題字*/
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+/*瘦長中體字*/
+@import url("https://fonts.googleapis.com/css?family=Noto+sans+TC:100,200,400,500,600,700,800,900&display=swap" );
+/*思源正黑體英文,   code: font-family: "Noto sans TC", sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family='Rotobo', sans-serif");
+/*adobel中細體英文,端正 'Rotobo', sans-serif */
+
+img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+    cursor:pointer;
+}
+*{
+   box-sizing:border-box;
+}
+:root{
+    --font-size:0.8rem;
+    --letter-splaceing:1.6px;
+    --font-weight:600;
+    --font-color-dard:#1b1b1bad;
+    --font-color-light:#fff;
+    --border-radius:5px;
+    --border:0.5px solid #adadad;
+    --box-shadow:0.3px 1px 3px 0 #a7a7a730,
+               0.3px 1px 7px 0 #a7a7a71a;
+}
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image:linear-gradient(180deg,#f8f2d6ad 25%, #a0986cad 100%);
+    font-family:'Helvetica', sans-serif;
+}
+.header{
+    width: 100%;
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.header #nav-left{
+    display:flex;
+    align-items: center;
+    margin:20px 15px;
+    list-style-type:none;
+    text-align: center;
+}
+.header #nav-right{
+    display:flex;
+    align-items: center;
+    margin:20px 15px;
+    list-style-type:none;
+    text-align: center;
+}
+#nav-right #sign-in{
+    padding:3px 15px;
+    margin-right:30px;
+    background-color:#efefac ;
+    outline: none;
+    border:var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    color:var(--color);
+    letter-spacing: var(--letter-splaceing);
+}
+.header li{
+    margin:0 20px;
+    font-size:var(--font-size);
+    font-weight: var(--font-weight);
+    color:var(--color);
+    letter-spacing: var(--letter-splaceing);
+}
+header li a{
+    color:var(--font-color-dard);
+    cursor: pointer;
+    border-bottom: 10px;
+}
+.header li a::after{
+    content:' ';
+    display:block;
+    width:0;
+    border-bottom: 1.5px solid #5376aa;
+    opacity: 0;
+    transition:0.7s;
+}
+.header li:hover a::after{
+    opacity: 1;
+    width:100%;
+    transition:to right  0.3s 0.5s;
+}
+#content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:center;
+    height:90vh;
+    width:100%; 
+    position:relative; 
+}
+#content #search{
+    margin:10px 0;   
+} 
+#search #search-box{
+    width:600px;
+    height:auto;
+    padding:5px 0px;
+    border-radius:var(--border-radius);
+    outline: none;
+    border:var(--border);
+    cursor: pointer;
+    font-size: var(--font-size);
+    box-shadow:var(--box-shadow)
+}
+#search-buttons .button{
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    color:var(--font-color-dard);
+    padding:10px 25px;
+    margin-left:10px;
+    border-radius:var(--border-radius);
+    outline: none;
+    border:var(--border);
+    background-color: #f5f5d3;
+    cursor: pointer;
+    box-shadow:var(--box-shadow);
+}
+footer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #422a0280;
+    box-shadow: var(--box-shadow);
+    width:100%;
+    height:25px;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+footer #footer-left{
+    display:flex;
+}
+footer #footer-left a:hover{
+    text-decoration: underline;
+}
+#footer-right{
+    display:flex;
+    margin-right:30px;
+}
+footer #footer-right a:hover{
+    text-decoration: underline;
+}
+footer li{
+    list-style-type: none;
+    margin:0 10px;
+    display:block;
+}
+footer li a{
+    color:var(--font-color-light);
+    font-size:var(--font-size);
+    font-weight: var(--font-weight);
+    letter-spacing: var(--letter-splaceing);
+    padding:0 10px;
+}
+
