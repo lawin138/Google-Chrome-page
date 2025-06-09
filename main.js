@@ -1,9 +1,7 @@
 
 const my_search_box = document.getElementById("search-box");
-function focusIt(){
-   my_search_box.focus();
 
-};
-
-onload = focusIt;
-
+function my_search_box(e){
+    e = onload
+}
+my_search_box.focus()
